@@ -9,8 +9,9 @@ import './InventoryPage.css';
 const InventoryPage = () => {
     const [searchParams] = useSearchParams();
     const initialBrand = searchParams.get('brand') || '';
+    const initialSearch = searchParams.get('search') || '';
 
-    const [searchTerm, setSearchTerm] = useState('');
+    const [searchTerm, setSearchTerm] = useState(initialSearch);
     const [selectedBrand, setSelectedBrand] = useState(initialBrand.toUpperCase());
     const [priceRange, setPriceRange] = useState('all');
 
@@ -18,7 +19,10 @@ const InventoryPage = () => {
         if (initialBrand) {
             setSelectedBrand(initialBrand.toUpperCase());
         }
-    }, [initialBrand]);
+        if (initialSearch) {
+            setSearchTerm(initialSearch);
+        }
+    }, [initialBrand, initialSearch]);
 
     const uniqueBrands = ['ALL', ...new Set(cars.map(car => car.brand))];
 

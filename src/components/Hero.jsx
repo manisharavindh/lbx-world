@@ -1,72 +1,85 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Search } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import './Hero.css';
 
 const Hero = () => {
+    const navigate = useNavigate();
+    const [searchValue, setSearchValue] = useState('');
+
+    const handleSearch = (e) => {
+        if (e.key === 'Enter' || e.button === 0) {
+            navigate(`/inventory?search=${encodeURIComponent(searchValue)}`);
+        }
+    };
+
+    const scrollToInventory = () => {
+        const element = document.getElementById('inventory');
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <section className="hero" id="home">
             <div className="hero-bg">
-                <img src="/assets/hb3.png" alt="Luxury Car" />
+                <img src="/assets/hb3.png" alt="Luxury Car Background" />
                 <div className="gradient-overlay"></div>
             </div>
 
             <div className="container hero-content">
-                <div className="hero-text">
-                    <motion.p
-                        className="brand-subtitle"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.1 }}
-                    >
-                        LuxeMotion
-                    </motion.p>
-                    <motion.h1
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-                    >
-                        Luxury Without Limits
-                    </motion.h1>
-
-                    <motion.p
-                        className="hero-description"
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-                    >
-                        A curated selection of the world's finest automobiles. <br />
-                        Unrivaled performance. Unparalleled elegance.
-                    </motion.p>
-
-                    <motion.button
-                        className="btn-primary"
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
-                    >
-                        Explore Collection <ArrowRight size={20} />
-                    </motion.button>
-                </div>
-
-                {/* <motion.div
-                    className="spec-card glass"
-                    initial={{ opacity: 0, x: 50 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
+                <motion.p
+                    className="welcome-text"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.1 }}
                 >
-                    <div className="spec-header">
-                        <h3>LuxeVanta V16</h3>
-                        <ArrowRight size={16} />
+                    Welcome to the Dream Destination for car Lovers.
+                </motion.p>
+                <motion.h1
+                    className="hero-title"
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+                >
+                    <span className="bold">Luxury</span> <span className="light">Without Limits</span>
+                </motion.h1>
+
+                <motion.div
+                    className="hero-actions"
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+                >
+                    <div className="search-bar">
+                        <input
+                            type="text"
+                            placeholder="Search Your Dream Car Here"
+                            value={searchValue}
+                            onChange={(e) => setSearchValue(e.target.value)}
+                            onKeyDown={handleSearch}
+                        />
+                        <button className="search-btn-icon" onClick={handleSearch}>
+                            <Search size={20} color="rgba(255,255,255,0.7)" />
+                        </button>
                     </div>
-                    <div className="specs-list">
-                        <span>2200 HP V16 engine</span>
-                        <span>1.8 seconds to 60 mph</span>
-                        <span>Limited to 3 units</span>
-                        <span>AI-driven</span>
-                    </div>
-                </motion.div> */}
+
+                    <button className="discover-btn" onClick={scrollToInventory}>
+                        Discover Collection <ArrowRight size={20} />
+                    </button>
+                </motion.div>
             </div>
+
+            <motion.div
+                className="scroll-indicator"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1.5, duration: 1 }}
+            >
+                {/* <div className="mouse-icon"></div> */}
+                <span>SCROLL DOWN</span>
+            </motion.div>
         </section>
     );
 };

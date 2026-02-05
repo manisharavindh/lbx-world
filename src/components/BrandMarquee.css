@@ -1,7 +1,8 @@
 .brand-section {
-    padding: 80px 0;
+    padding: 80px 0 0 0;
     background: var(--color-bg);
-    border-bottom: 1px solid var(--color-border);
+    /* border-bottom: 1px solid var(--color-border); */
+    /* border-top: 1px solid var(--color-border); */
 }
 
 .section-title {

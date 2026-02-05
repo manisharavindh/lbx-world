@@ -3,9 +3,24 @@ import './BrandMarquee.css';
 import { useNavigate } from 'react-router-dom';
 
 const brands = [
-    "ROLLS-ROYCE", "BENTLEY", "PORSCHE", "FERRARI", "LAMBORGHINI", "ASTON MARTIN", "MERCEDES-MAYBACH", "MASERATI",
-    "BUGATTI", "MCLAREN", "AUDI", "BMW", "LEXUS", "KOENIGSEGG", "PAGANI"
+    // Luxury Cars
+    "MERCEDES-BENZ",
+    "BMW",
+    "AUDI",
+    "VOLVO",
+    "TOYOTA",
+    "LEXUS",
+    "JAGUAR",
+    "LAND ROVER",
+    "PORSCHE",
+    "MINI",
+    "BMW MOTORRAD",
+    "DUCATI",
+    "TRIUMPH",
+    "HARLEY-DAVIDSON",
+    "ROYAL ENFIELD",
 ];
+
 
 const BrandMarquee = () => {
     const navigate = useNavigate();
@@ -20,7 +35,7 @@ const BrandMarquee = () => {
     return (
         <section className="brand-section">
             <div className="container">
-                <h4 className="section-title text-center">LEADING LUXURY BRANDS</h4>
+                {/* <h4 className="section-title text-center">LEADING LUXURY BRANDS</h4> */}
                 <div
                     className="marquee-wrapper"
                     onMouseEnter={() => setIsPaused(true)}

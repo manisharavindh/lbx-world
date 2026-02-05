@@ -1,6 +1,6 @@
 .inventory {
     position: relative;
-    background: radial-gradient(circle at 50% 10%, #151515 0%, var(--color-bg) 60%);
+    /* background: radial-gradient(circle at 50% 10%, #151515 0%, var(--color-bg) 60%); */
 }
 
 .inventory-header {
