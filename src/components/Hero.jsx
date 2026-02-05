@@ -78,7 +78,7 @@ const Hero = () => {
                 transition={{ delay: 1.5, duration: 1 }}
             >
                 {/* <div className="mouse-icon"></div> */}
-                <span>SCROLL DOWN</span>
+                <span onClick={scrollToInventory}>SCROLL DOWN</span>
             </motion.div>
         </section>
     );

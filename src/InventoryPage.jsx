@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams, useNavigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import { cars } from './data/cars';
-import { Search, Filter, ArrowRight } from 'lucide-react';
+import { Search, Filter, ArrowRight, Gauge, Fuel, Calendar } from 'lucide-react';
 import './InventoryPage.css';
 
 const InventoryPage = () => {
     const [searchParams] = useSearchParams();
+    const navigate = useNavigate();
     const initialBrand = searchParams.get('brand') || '';
     const initialSearch = searchParams.get('search') || '';
 
@@ -79,19 +80,48 @@ const InventoryPage = () => {
 
             <div className="container inventory-grid-full">
                 {filteredCars.map(car => (
-                    <div key={car.id} className="car-card glass">
-                        <div className="card-badge">{car.brand}</div>
-                        <div className="img-wrapper">
-                            <img src={car.image} alt={car.model} />
+                    <div
+                        key={car.id}
+                        className="car-card glass"
+                        onClick={() => navigate(`/inventory/${car.id}`)}
+                        style={{ cursor: 'pointer' }}
+                    >
+                        <div className="card-badge">
+                            {car.year} • {car.brand}
                         </div>
+
+                        <div className="img-wrapper">
+                            <img src={car.image} alt={car.model} draggable="false" />
+                            <div className="hover-shine"></div>
+                        </div>
+
                         <div className="card-content">
-                            <div className="card-header-row">
-                                <h3>{car.model}</h3>
-                                <span className="year">{car.year}</span>
+                            <h3>{car.model}</h3>
+                            <div className="price-tag">${car.price.toLocaleString()}</div>
+
+                            <div className="specs-grid">
+                                <div className="spec-item">
+                                    <Gauge size={16} />
+                                    <div>
+                                        <span className="label">Mileage</span>
+                                        <span className="value">{car.mileage.toLocaleString()} mi</span>
+                                    </div>
+                                </div>
+                                <div className="spec-item">
+                                    <Fuel size={16} />
+                                    <div>
+                                        <span className="label">Fuel</span>
+                                        <span className="value">{car.fuel}</span>
+                                    </div>
+                                </div>
+                                <div className="spec-item">
+                                    <Calendar size={16} />
+                                    <div>
+                                        <span className="label">Reg</span>
+                                        <span className="value">{car.reg}</span>
+                                    </div>
+                                </div>
                             </div>
-                            <p className="description">{car.description}</p>
-                            <div className="price-tag-large">${car.price.toLocaleString()}</div>
-                            <button className="btn-outline full-width">View Details</button>
                         </div>
                     </div>
                 ))}

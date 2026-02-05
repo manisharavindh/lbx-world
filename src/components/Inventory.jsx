@@ -20,20 +20,7 @@ const Inventory = () => {
         }
     };
 
-    // Auto scroll effect
-    React.useEffect(() => {
-        const interval = setInterval(() => {
-            if (scrollRef.current) {
-                const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
-                if (scrollLeft + clientWidth >= scrollWidth - 5) { // Reset if at end
-                    scrollRef.current.scrollTo({ left: 0, behavior: 'smooth' });
-                } else {
-                    scrollRef.current.scrollBy({ left: 400, behavior: 'smooth' });
-                }
-            }
-        }, 5000); // Scroll every 5 seconds
-        return () => clearInterval(interval);
-    }, []);
+
 
     return (
         <section className="inventory section-padding" id="inventory">
@@ -50,7 +37,12 @@ const Inventory = () => {
 
                 <div className="inventory-carousel" ref={scrollRef}>
                     {cars.slice(0, 6).map((car) => (
-                        <div key={car.id} className="car-card glass carousel-item">
+                        <div
+                            key={car.id}
+                            className="car-card glass carousel-item"
+                            onClick={() => navigate(`/inventory/${car.id}`)}
+                            style={{ cursor: 'pointer' }}
+                        >
                             <div className="card-badge">
                                 {car.year} • {car.brand}
                             </div>
