@@ -25,66 +25,62 @@
     object-fit: cover;
 }
 
-.overlay-content {
+/* Cinematic Dark Overlay (Vignette) */
+.showcase-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: radial-gradient(circle at center, rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0.85) 100%);
     pointer-events: none;
-    /* Let clicks pass through */
-    z-index: 20;
+    z-index: 15;
 }
 
-.scroll-text {
+/* Replaced overlay-content with static-info */
+.static-info {
     position: absolute;
-    text-align: center;
-    color: var(--color-text-primary);
-    max-width: 800px;
-    padding: 0 20px;
+    top: 100px;
+    left: 80px;
+    z-index: 20;
+    pointer-events: none;
 }
 
-.scroll-text h2 {
-    font-size: 5rem;
-    /* Increased size for impact */
-    font-weight: 800;
-    /* Bolder */
+.bestseller-badge {
+    text-align: left;
+}
+
+.badge-highlight {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--color-accent);
     margin-bottom: 0.5rem;
+    display: block;
+
+    /* M-Performance / Bestseller gradient text */
+    background: linear-gradient(to right, #0066b1, #ffffff, #e1002a);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 1;
+}
+
+.bestseller-badge h1 {
+    font-family: var(--font-family);
+    font-size: 2.5rem;
+    font-weight: 800;
     background: linear-gradient(135deg, #fff 0%, #aaa 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    letter-spacing: -2px;
     line-height: 1.1;
+    margin: 0;
 }
 
-.scroll-text p {
-    font-size: 1.5rem;
-    color: var(--color-text-secondary);
-    font-weight: 300;
-    letter-spacing: 1px;
-}
-
-.scroll-text .highlight {
-    font-size: 1rem;
-    font-weight: 700;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    color: var(--color-accent);
-    margin-bottom: 1rem;
-    display: block;
-    background: linear-gradient(to right, #0066b1, #ffffff, #e1002a);
-    /* M Performance colors hint */
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    opacity: 0.9;
-}
-
+/* Loading Overlay */
 .loading-overlay {
     position: absolute;
     top: 0;
@@ -140,50 +136,17 @@
     opacity: 1;
 }
 
-.mouse-icon {
-    width: 24px;
-    height: 40px;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    border-radius: 20px;
-    position: relative;
-}
-
-.mouse-icon::after {
-    content: '';
-    position: absolute;
-    top: 8px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 4px;
-    height: 4px;
-    background-color: var(--color-accent);
-    border-radius: 50%;
-    animation: mouse-scroll 1.5s infinite;
-}
-
-@keyframes mouse-scroll {
-    0% {
-        transform: translate(-50%, 0);
-        opacity: 1;
-    }
-
-    100% {
-        transform: translate(-50%, 15px);
-        opacity: 0;
-    }
-}
-
 @media (max-width: 768px) {
-    .scroll-text h2 {
-        font-size: 3rem;
+    .static-info {
+        top: 60px;
+        left: 30px;
     }
 
-    .scroll-text p {
-        font-size: 1.1rem;
+    .bestseller-badge h1 {
+        font-size: 2.2rem;
     }
 
-    .model-showcase-container {
-        height: 300vh;
-        /* Slightly shorter scroll on mobile */
+    .badge-highlight {
+        font-size: 0.75rem;
     }
 }

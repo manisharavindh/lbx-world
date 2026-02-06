@@ -16,18 +16,8 @@ const ModelShowcase = () => {
     });
 
     // Transform scroll progress to frame index (0 to 39 for 40 frames)
-    const frameCount = 40;
+    const frameCount = 124;
     const currentFrame = useTransform(scrollYProgress, [0, 1], [0, frameCount - 1]);
-
-    // Text opacity transformations
-    const text1Opacity = useTransform(scrollYProgress, [0.1, 0.2, 0.3], [0, 1, 0]);
-    const text2Opacity = useTransform(scrollYProgress, [0.4, 0.5, 0.6], [0, 1, 0]);
-    const text3Opacity = useTransform(scrollYProgress, [0.7, 0.8, 0.9], [0, 1, 0]);
-
-    // Scale text for better effect
-    const text1Scale = useTransform(scrollYProgress, [0.1, 0.2, 0.3], [0.8, 1, 1.2]);
-    const text2Scale = useTransform(scrollYProgress, [0.4, 0.5, 0.6], [0.8, 1, 1.2]);
-    const text3Scale = useTransform(scrollYProgress, [0.7, 0.8, 0.9], [0.8, 1, 1.2]);
 
     // Preload images
     useEffect(() => {
@@ -107,15 +97,15 @@ const ModelShowcase = () => {
 
         ctx.drawImage(image, x, y, image.width * scale, image.height * scale);
 
-        // Overlay for text readability
-        ctx.fillStyle = 'rgba(0, 0, 0, 0.4)';
-        ctx.fillRect(0, 0, width, height);
+        // NO overlay needed anymore as we don't have text reading issues
+        // But a very subtle vignette could be nice? Let's keep it clean for now as user asked for "perfect" car view.
     };
 
     return (
         <div ref={containerRef} className="model-showcase-container">
             <div className="sticky-wrapper">
                 <canvas ref={canvasRef} className="showcase-canvas" />
+                <div className="showcase-overlay"></div>
 
                 {loading && (
                     <div className="loading-overlay">
@@ -124,27 +114,16 @@ const ModelShowcase = () => {
                     </div>
                 )}
 
-                {/* Text Overlays - Scrollytelling */}
-                <div className="overlay-content">
-                    <motion.div style={{ opacity: text1Opacity, scale: text1Scale }} className="scroll-text">
-                        <h2>The M340i xDrive</h2>
-                        <p className="highlight">LBX WORLD BESTSELLER</p>
-                        <p>3.0L M TwinPower Turbo Inline-6</p>
-                    </motion.div>
-
-                    <motion.div style={{ opacity: text2Opacity, scale: text2Scale }} className="scroll-text">
-                        <h2>Track-Ready Precision</h2>
-                        <p>Adaptive M Suspension & Differential</p>
-                    </motion.div>
-
-                    <motion.div style={{ opacity: text3Opacity, scale: text3Scale }} className="scroll-text">
-                        <h2>Unmatched Presence</h2>
-                        <p>Aerodynamic excellence meets daily drivability.</p>
-                    </motion.div>
+                {/* Static Bestseller Badge */}
+                <div className="static-info">
+                    <div className="bestseller-badge">
+                        <span className="badge-highlight">#1 BESTSELLER</span>
+                        <h1>BMW M340i xDrive</h1>
+                    </div>
                 </div>
 
                 <div className="scroll-indicator">
-                    <span>Scroll to Explore</span>
+                    <span>Scroll to Rotate</span>
                     {/* <div className="mouse-icon"></div> */}
                 </div>
             </div>
