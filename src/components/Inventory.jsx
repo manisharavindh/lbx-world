@@ -8,17 +8,53 @@ import { useNavigate } from 'react-router-dom';
 const Inventory = () => {
     const scrollRef = useRef(null);
     const navigate = useNavigate();
+    const [isAutoScrollActive, setIsAutoScrollActive] = React.useState(true);
+
+    const stopAutoScroll = () => {
+        setIsAutoScrollActive(false);
+    };
+
 
     const scroll = (direction) => {
+        stopAutoScroll();
         const { current } = scrollRef;
         if (current) {
-            const scrollAmount = 400;
+            const isMobile = window.innerWidth <= 768;
+            const cardWidth = isMobile ? 300 : 350;
+            const scrollAmount = cardWidth + 30; // Card width + gap
             current.scrollBy({
                 left: direction === 'left' ? -scrollAmount : scrollAmount,
                 behavior: 'smooth'
             });
         }
     };
+
+
+    // Auto-scroll on mobile
+    React.useEffect(() => {
+        const isMobile = window.innerWidth <= 768;
+        if (!isMobile || !isAutoScrollActive) return;
+
+        const interval = setInterval(() => {
+
+            if (scrollRef.current) {
+                const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+                const cardWidth = 300; // Mobile card width
+                const scrollAmount = cardWidth + 30;
+
+
+                // Check if we've reached the end
+                if (scrollLeft + clientWidth >= scrollWidth - 10) {
+                    scrollRef.current.scrollTo({ left: 0, behavior: 'smooth' });
+                } else {
+                    scrollRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+                }
+            }
+        }, 5000); // 5 seconds delay
+
+        return () => clearInterval(interval);
+    }, [isAutoScrollActive]);
+
 
 
 
@@ -35,7 +71,14 @@ const Inventory = () => {
                     </div>
                 </div>
 
-                <div className="inventory-carousel" ref={scrollRef}>
+                <div
+                    className="inventory-carousel"
+                    ref={scrollRef}
+                    onTouchStart={stopAutoScroll}
+                    onMouseDown={stopAutoScroll}
+                    onWheel={stopAutoScroll}
+                >
+
                     {cars.slice(0, 6).map((car) => (
                         <div
                             key={car.id}

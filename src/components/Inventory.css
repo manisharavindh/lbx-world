@@ -58,6 +58,8 @@
     scroll-behavior: smooth;
     padding-bottom: 40px;
     padding-top: 20px;
+    scroll-snap-type: x mandatory;
+
     /* Add space for hover lift */
     /* Space for shadow/hover */
     /* Hide scrollbar */
@@ -77,6 +79,8 @@
 .carousel-item {
     flex: 0 0 350px;
     max-width: 350px;
+    scroll-snap-align: center;
+
 }
 
 .car-card {
@@ -195,5 +199,10 @@
 
     .line-dec {
         display: none;
+    }
+
+    .carousel-item {
+        flex: 0 0 300px;
+        max-width: 300px;
     }
 }

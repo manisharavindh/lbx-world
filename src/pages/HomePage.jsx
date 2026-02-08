@@ -16,8 +16,8 @@ const HomePage = () => (
         <Inventory />
         <BrandMarquee />
         <ModelShowcase />
-        <Services />
         <Experience />
+        <Services />
         <Contact />
         <Footer />
     </>
