@@ -101,15 +101,22 @@ const ModelShowcase = () => {
     };
 
     return (
-        <div ref={containerRef} className="model-showcase-container">
+        <div ref={containerRef} className={`model-showcase-container ${loading ? 'loading' : ''}`}>
             <div className="sticky-wrapper">
                 <canvas ref={canvasRef} className="showcase-canvas" />
                 <div className="showcase-overlay"></div>
 
                 {loading && (
                     <div className="loading-overlay">
-                        <div className="spinner"></div>
-                        <p>Initializing M Performance...</p>
+                        <div className="loading-bg">
+                            <img src="/assets/hero-bg.png" alt="Loading Background" />
+                            <div className="loading-gradient"></div>
+                        </div>
+
+                        <div className="loading-content">
+                            <div className="spinner"></div>
+                            {/* <p>Initializing M Performance...</p> */}
+                        </div>
                     </div>
                 )}
 

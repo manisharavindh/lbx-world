@@ -6,6 +6,10 @@
     z-index: 10;
 }
 
+.model-showcase-container.loading {
+    height: 100vh;
+}
+
 .sticky-wrapper {
     position: sticky;
     top: 0;
@@ -42,7 +46,7 @@
     position: absolute;
     top: 100px;
     left: 80px;
-    z-index: 20;
+    z-index: 40;
     pointer-events: none;
 }
 
@@ -87,16 +91,46 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(5, 5, 5, 0.8);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: #000;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: 30;
-    gap: 1rem;
     transition: opacity 0.5s ease;
+}
+
+.loading-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.loading-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.loading-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #000 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.3) 100%);
+    z-index: 2;
+}
+
+.loading-content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 
 .spinner {
