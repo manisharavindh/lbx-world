@@ -10,10 +10,10 @@ const ModelShowcase = () => {
     const [loading, setLoading] = useState(true);
 
     // Sprite configuration
-    const FRAME_COUNT = 124;
+    const FRAME_COUNT = 192;
     const COLS = 12;
-    const FRAME_WIDTH = 640;
-    const FRAME_HEIGHT = 360;
+    const FRAME_WIDTH = 1280;
+    const FRAME_HEIGHT = 720;
 
     // Scroll progress for the entire section
     const { scrollYProgress } = useScroll({
@@ -27,7 +27,7 @@ const ModelShowcase = () => {
     // Load sprite sheet
     useEffect(() => {
         const img = new Image();
-        img.src = '/assets/car-side-sprite.jpg';
+        img.src = '/assets/model-showcase/sprite.jpg';
         img.onload = () => {
             setSpriteSheet(img);
             setLoading(false);
