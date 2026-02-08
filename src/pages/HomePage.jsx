@@ -1,0 +1,26 @@
+import React from 'react';
+import Navbar from '../components/Navbar';
+import Hero from '../components/Hero';
+import BrandMarquee from '../components/BrandMarquee';
+import Inventory from '../components/Inventory';
+import Experience from '../components/Experience';
+import Footer from '../components/Footer';
+import Contact from '../components/Contact';
+import ModelShowcase from '../components/ModelShowcase';
+import Services from '../components/Services';
+
+const HomePage = () => (
+    <>
+        <Navbar />
+        <Hero />
+        <Inventory />
+        <BrandMarquee />
+        <ModelShowcase />
+        <Services />
+        <Experience />
+        <Contact />
+        <Footer />
+    </>
+);
+
+export default HomePage;

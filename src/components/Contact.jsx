@@ -52,8 +52,8 @@ const Contact = () => {
                                 <div className="icon-box"><Phone size={20} /></div>
                                 <div>
                                     <h4>Call Us</h4>
-                                    <p>+1 (310) 555-0123</p>
-                                    <p className="secondary-text">+1 (310) 555-0124</p>
+                                    <p>+1 (234) 567-8901</p>
+                                    <p className="secondary-text">+1 (234) 567-8902</p>
                                 </div>
                             </div>
 
@@ -70,8 +70,8 @@ const Contact = () => {
                                 <div className="icon-box"><MapPin size={20} /></div>
                                 <div>
                                     <h4>Visit Showroom</h4>
-                                    <p>8888 Wilshire Blvd</p>
-                                    <p className="secondary-text">Beverly Hills, CA 90211</p>
+                                    <p>Coimbatore, Tamil Nadu</p>
+                                    <p className="secondary-text">Avinasi Road, CBE - 641012</p>
                                 </div>
                             </div>
                         </div>

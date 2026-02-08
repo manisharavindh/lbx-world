@@ -1,7 +1,7 @@
-@import './components/Inventory.css';
+@import '../components/Inventory.css';
 
 .inventory-page-header {
-    padding: 180px 0 60px;
+    padding-top: 100px;
     background: linear-gradient(to bottom, #000 0%, #0a0a0a 100%);
     text-align: center;
 }
@@ -9,9 +9,7 @@
 .inventory-page-header h1 {
     font-size: 4rem;
     margin-bottom: 1rem;
-    background: linear-gradient(to right, #fff, #999);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #fff;
 }
 
 .inventory-page-header p {
@@ -32,6 +30,7 @@
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    border: 1px solid var(--color-border);
 }
 
 .search-icon {

@@ -24,7 +24,7 @@ const Hero = () => {
     return (
         <section className="hero" id="home">
             <div className="hero-bg">
-                <img src="/assets/hb.png" alt="Luxury Car Background" />
+                <img src="/assets/hero-bg.png" alt="Luxury Car Background" />
                 <div className="gradient-overlay"></div>
             </div>
 

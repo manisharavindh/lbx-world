@@ -13,7 +13,7 @@
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     padding: 16px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.075);
 }
 
 .navbar-content {
@@ -126,10 +126,6 @@
     transition: transform 0.3s;
 }
 
-.menu-close-btn:hover {
-    transform: rotate(90deg);
-}
-
 .menu-links {
     display: flex;
     flex-direction: column;
@@ -148,12 +144,12 @@
 
 .menu-links a:hover {
     opacity: 1;
-    transform: scale(1.05);
+    /* transform: scale(1.05); */
 }
 
 .menu-links .separator {
     width: 50px;
-    height: 1px;
+    height: 1.5px;
     background: rgba(255, 255, 255, 0.2);
     margin: 1rem auto;
 }

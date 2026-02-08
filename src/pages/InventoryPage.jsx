@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import { cars } from './data/cars';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import { cars } from '../data/cars';
 import { Search, Filter, ArrowRight, Gauge, Fuel, Calendar } from 'lucide-react';
 import './InventoryPage.css';
 
@@ -48,7 +48,7 @@ const InventoryPage = () => {
             <div className="inventory-page-header">
                 <div className="container">
                     <h1>The Collection</h1>
-                    <p>Curated excellence for the discerning driver.</p>
+                    {/* <p>Curated excellence for the discerning driver.</p> */}
                 </div>
             </div>
 
