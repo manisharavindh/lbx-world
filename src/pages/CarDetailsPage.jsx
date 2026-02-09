@@ -4,15 +4,16 @@ import { motion } from 'framer-motion';
 import { ArrowLeft, Check, Phone, Mail, Calendar, Gauge, Fuel, MapPin, Shield } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { cars } from '../data/cars';
+import { useCarContext } from '../context/CarContext';
 import './CarDetailsPage.css';
 
 const CarDetailsPage = () => {
     const { id } = useParams();
     const navigate = useNavigate();
+    const { allCars } = useCarContext();
 
     // Find the car
-    const car = cars.find(c => c.id === parseInt(id));
+    const car = allCars.find(c => c.id === parseInt(id));
     const [currentImage, setCurrentImage] = React.useState(null);
 
     // Handle car not found

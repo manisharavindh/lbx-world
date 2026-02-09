@@ -1,13 +1,14 @@
 import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Gauge, Fuel, Calendar, ArrowRight, ArrowLeft } from 'lucide-react';
-import { cars } from '../data/cars';
+import { useCarContext } from '../context/CarContext';
 import './Inventory.css';
 import { useNavigate } from 'react-router-dom';
 
 const Inventory = () => {
     const scrollRef = useRef(null);
     const navigate = useNavigate();
+    const { recentCars } = useCarContext();
     const [isAutoScrollActive, setIsAutoScrollActive] = React.useState(true);
 
     const stopAutoScroll = () => {
@@ -79,7 +80,7 @@ const Inventory = () => {
                     onWheel={stopAutoScroll}
                 >
 
-                    {cars.slice(0, 6).map((car) => (
+                    {recentCars.map((car) => (
                         <div
                             key={car.id}
                             className="car-card glass carousel-item"

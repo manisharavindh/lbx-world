@@ -2,11 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { cars } from '../data/cars';
-import { Search, Filter, ArrowRight, Gauge, Fuel, Calendar } from 'lucide-react';
+import { useCarContext } from '../context/CarContext';
+import { Search, Filter, ArrowRight, Gauge, Fuel, Calendar, Phone } from 'lucide-react';
+
 import './InventoryPage.css';
 
 const InventoryPage = () => {
+    const { allCars } = useCarContext();
     const [searchParams] = useSearchParams();
     const navigate = useNavigate();
     const initialBrand = searchParams.get('brand') || '';
@@ -25,9 +27,9 @@ const InventoryPage = () => {
         }
     }, [initialBrand, initialSearch]);
 
-    const uniqueBrands = ['ALL', ...new Set(cars.map(car => car.brand))];
+    const uniqueBrands = ['ALL', ...new Set(allCars.map(car => car.brand))];
 
-    const filteredCars = cars.filter(car => {
+    const filteredCars = allCars.filter(car => {
         const matchesSearch = car.model.toLowerCase().includes(searchTerm.toLowerCase()) ||
             car.brand.toLowerCase().includes(searchTerm.toLowerCase());
         const matchesBrand = selectedBrand === 'ALL' || !selectedBrand || car.brand === selectedBrand;
@@ -121,8 +123,19 @@ const InventoryPage = () => {
                                         <span className="value">{car.reg}</span>
                                     </div>
                                 </div>
+                                <button
+                                    className="call-btn"
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        window.location.href = 'tel:+447777777777';
+                                    }}
+                                >
+                                    <Phone size={16} />
+                                    <span>Call</span>
+                                </button>
                             </div>
                         </div>
+
                     </div>
                 ))}
 
@@ -140,3 +153,5 @@ const InventoryPage = () => {
 };
 
 export default InventoryPage;
+
+

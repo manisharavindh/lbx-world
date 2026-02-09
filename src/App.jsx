@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import HomePage from './pages/HomePage';
 import InventoryPage from './pages/InventoryPage';
 import CarDetailsPage from './pages/CarDetailsPage';
+import AdminLogin from './pages/AdminLogin';
+import AdminDashboard from './pages/AdminDashboard';
+import { CarProvider } from './context/CarContext';
 
 // Scroll to top on route change
 const ScrollToTop = () => {
@@ -27,14 +30,18 @@ const ScrollToTop = () => {
 
 function App() {
   return (
-    <Router>
-      <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/inventory" element={<InventoryPage />} />
-        <Route path="/inventory/:id" element={<CarDetailsPage />} />
-      </Routes>
-    </Router>
+    <CarProvider>
+      <Router>
+        <ScrollToTop />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/inventory" element={<InventoryPage />} />
+          <Route path="/inventory/:id" element={<CarDetailsPage />} />
+          <Route path="/admin" element={<AdminLogin />} />
+          <Route path="/admin-dashboard" element={<AdminDashboard />} />
+        </Routes>
+      </Router>
+    </CarProvider>
   );
 }
 

@@ -9,6 +9,10 @@ import Contact from '../components/Contact';
 import ModelShowcase from '../components/ModelShowcase';
 import Services from '../components/Services';
 
+// import floatinf contact
+import FC from '../components/FloatingContact';
+
+
 const HomePage = () => (
     <>
         <Navbar />
@@ -20,6 +24,7 @@ const HomePage = () => (
         <Services />
         <Contact />
         <Footer />
+        {/* <FC /> */}
     </>
 );
 

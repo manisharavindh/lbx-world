@@ -72,9 +72,11 @@ const Navbar = () => {
                     <Link to="/" onClick={(e) => handleNavClick(e, '#contact')}>Contact</Link>
                     {/* Extra elements as requested */}
                     <span className="separator"></span>
-                    <a href="#">About LBX</a>
+                    {/* <a href="#">About LBX</a> */}
                     <a href="#">Sell Your Car</a>
                     <a href="#">Finance</a>
+                    <span className="separator"></span>
+                    <Link to="/admin-dashboard" onClick={() => setIsMenuOpen(false)}>Admin</Link>
                 </div>
             </div>
         </>

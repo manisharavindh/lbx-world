@@ -43,6 +43,7 @@ const Footer = () => {
                         <a href="#">Cookie policy</a>
                         <a href="#">Terms of service</a>
                         <a href="#">Privacy policy</a>
+                        <a href="/admin-dashboard">Admin</a>
                     </div>
                 </div>
             </div>
