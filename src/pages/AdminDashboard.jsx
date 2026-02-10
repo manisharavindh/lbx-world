@@ -4,7 +4,7 @@ import { useCarContext } from '../context/CarContext';
 
 import {
     Plus, Trash2, Check, X, LogOut, Image as ImageIcon,
-    ArrowLeft, ArrowRight, Settings, Download, Upload, Home, Package, Search
+    ArrowLeft, ArrowRight, ArrowDown, ArrowUp, Settings, Download, Upload, Home, Package, Search
 } from 'lucide-react';
 import './Admin.css';
 import { color } from 'framer-motion';

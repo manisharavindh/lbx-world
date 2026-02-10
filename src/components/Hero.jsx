@@ -77,7 +77,7 @@ const Hero = () => {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut", delay: 0.8 }}
             >
-                <span onClick={scrollToInventory}>SCROLL DOWN</span>
+                <span onClick={scrollToInventory} className='scroll-down'>SCROLL DOWN</span>
             </motion.div>
         </section>
     );

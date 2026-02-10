@@ -38,11 +38,13 @@ const Footer = () => {
                 </div>
 
                 <div className="footer-bottom">
-                    <span>LBX World © 2026</span>
+                    <div className="copyright">
+                        <span>© 2026 LBX World. All rights reserved.</span>
+                    </div>
                     <div className="legal-links">
-                        <a href="#">Cookie policy</a>
-                        <a href="#">Terms of service</a>
-                        <a href="#">Privacy policy</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookies</a>
                     </div>
                 </div>
             </div>

@@ -38,7 +38,7 @@ const Experience = () => {
 
                     <div className="exp-image-container">
                         <div className="exp-image glass">
-                            <img src="https://images.squarespace-cdn.com/content/v1/6871441ae3437a55afc2a857/a2b64843-ab18-450d-ba02-8f54db4c0747/Jake_RWB_Day1-20.JPG" alt="Car Wrapping and Detailing" />
+                            <img src="https://yeswrap.com/cdn/shop/files/pearl_white_iridescent_car_wrap.png?v=1756700669&width=1800" alt="Car Wrapping and Detailing" />
                         </div>
                         <div className="exp-deco"></div>
                     </div>

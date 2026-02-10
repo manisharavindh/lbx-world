@@ -132,11 +132,11 @@ const CarDetailsPage = () => {
                             <h3 className="section-title">Vehicle Overview</h3>
                             <div className="description-section">
                                 <p>{car.description}</p>
-                                <p style={{ marginTop: '1rem' }}>
+                                {/* <p style={{ marginTop: '1rem' }}>
                                     This {car.year} {car.brand} {car.model} represents the pinnacle of automotive engineering.
                                     Meticulously maintained and presented in showroom condition, it offers an unparalleled driving experience.
                                     Featuring a comprehensive suite of luxury options and performance enhancements using the latest technology.
-                                </p>
+                                </p> */}
                             </div>
                         </div>
 

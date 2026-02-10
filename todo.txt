@@ -5,9 +5,12 @@
 
 [] better responsiveness
 [] darkness on the edje of the scrolling elemenets like inventory
-[] snapping inventory on button clicks
+[*] snapping inventory on button clicks
 [] that blue gradient text as accent color
 
-[] better video for the showcase thing
+[*] better video for the showcase thing
 [] main focus is to funnel the user to contact using a floating icon on the corner with calling redirections to the dialler nummber
 [] improve the dynamic elemetns
+
+
+[] when log

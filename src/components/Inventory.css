@@ -59,21 +59,12 @@
     padding-bottom: 40px;
     padding-top: 20px;
     scroll-snap-type: x mandatory;
-
-    /* Add space for hover lift */
-    /* Space for shadow/hover */
-    /* Hide scrollbar */
     scrollbar-width: none;
-    /* Firefox */
     -ms-overflow-style: none;
-    /* IE 10+ */
-    /* padding-left: 10px; */
-    /* padding-right: 10px; */
 }
 
 .inventory-carousel::-webkit-scrollbar {
     display: none;
-    /* Chrome/Safari */
 }
 
 .carousel-item {
@@ -374,7 +365,7 @@
     color: #000;
     border: none;
     padding: 0.6rem 1.2rem;
-    border-radius: 8px;
+    border-radius: 50px !important;
     font-weight: 600;
     cursor: pointer;
     font-size: 0.9rem;
@@ -418,23 +409,116 @@
 
 /* Update mobile layout */
 @media (max-width: 768px) {
+    .inventory {
+        padding-bottom: 40px;
+    }
+
     .inventory-header {
         flex-direction: column;
         align-items: flex-start;
+        gap: 1.25rem;
+        margin-bottom: 2rem;
+        padding: 0;
+    }
+
+    .inventory-header h2 {
+        font-size: 2rem;
+        margin: 0;
+        line-height: 1.1;
+        text-align: center;
+        width: 100%;
     }
 
     .inventory-controls {
         width: 100%;
-        justify-content: space-between;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    /* Restore and style navigation arrows */
+    .inventory-controls .nav-btn {
+        display: flex;
+        width: 44px;
+        height: 44px;
+        border-color: rgba(255, 255, 255, 0.2);
+        /* background: rgba(255, 255, 255, 0.05); */
+        /* Subtle background */
+    }
+
+    /* Push the 'All Collection' button to the right */
+    .inventory-controls .nav-btn:nth-child(2) {
+        margin-right: auto;
+    }
+
+    .inventory-controls .nav-btn svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .inventory-controls .btn-primary {
+        padding: 0 1.25rem;
+        font-size: 0.9rem;
+        height: 44px;
+        white-space: nowrap;
     }
 
     .line-dec {
         display: none;
     }
 
+    /* Carousel Tweaks */
+    .inventory-carousel {
+        padding: 10px 20px 40px;
+        margin: 0 -20px;
+        gap: 15px;
+        scroll-padding-left: 20px;
+    }
+
     .carousel-item {
-        flex: 0 0 300px;
-        max-width: 300px;
+        flex: 0 0 85vw;
+        max-width: 85vw;
+    }
+
+    .car-card {
+        border-radius: 20px;
+        box-shadow: 0 15px 35px -15px rgba(0, 0, 0, 0.5);
+    }
+
+    .img-wrapper {
+        height: 240px;
+        /* Slightly taller for premium feel */
+    }
+
+    .card-content {
+        padding: 1.5rem;
+        /* More breathing room */
+    }
+
+    .card-content h3 {
+        font-size: 1.25rem;
+    }
+
+    .price-tag {
+        font-size: 1.35rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .specs-grid {
+        gap: 12px;
+    }
+
+    .spec-item svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .label {
+        font-size: 0.7rem;
+    }
+
+    .value {
+        font-size: 0.9rem;
     }
 
     .mobile-only-action {
@@ -447,6 +531,11 @@
 
     .action-btn {
         height: 44px;
-        /* Ensure touch target on mobile */
+        /* Standardize visible height */
+        font-size: 0.95rem;
+    }
+
+    .action-buttons {
+        margin-top: 1.5rem;
     }
 }
