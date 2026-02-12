@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useCarContext } from '../context/CarContext';
-import { motion } from 'framer-motion';
 // import { Lock, User } from 'lucide-react';
 import './Admin.css';
 
@@ -24,9 +23,7 @@ const AdminLogin = () => {
 
     return (
         <section className="admin-login-container">
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+            <div
                 className="glass login-card"
             >
                 <h2 className="login-title">Admin Access</h2>
@@ -69,7 +66,7 @@ const AdminLogin = () => {
                         Login
                     </button>
                 </form>
-            </motion.div>
+            </div>
         </section>
     );
 };

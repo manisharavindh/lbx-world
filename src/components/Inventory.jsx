@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { motion } from 'framer-motion';
+
 import { Gauge, Fuel, Calendar, ArrowRight, ArrowLeft, Mail, Phone, Copy, Check, X } from 'lucide-react';
 import { useCarContext } from '../context/CarContext';
 import './Inventory.css';

@@ -19,22 +19,30 @@ export const CarProvider = ({ children }) => {
         const savedRecentIds = localStorage.getItem('lbx_recentCarIds_v2');
         const savedAdmin = localStorage.getItem('lbx_isAdmin');
 
-        if (savedCars) {
-            setAllCars(JSON.parse(savedCars));
-        } else {
-            // First time load: use the static data
-            // Add a default 'isRecent' flag or just take the first 6 as recent
+        try {
+            if (savedCars) {
+                setAllCars(JSON.parse(savedCars));
+            } else {
+                // First time load: use the static data
+                setAllCars(initialCars);
+                const initialRecents = initialCars.slice(0, 6).map(c => c.id);
+                setRecentCarIds(initialRecents);
+                localStorage.setItem('lbx_allCars_v2', JSON.stringify(initialCars));
+                localStorage.setItem('lbx_recentCarIds_v2', JSON.stringify(initialRecents));
+            }
+
+            if (savedRecentIds) {
+                setRecentCarIds(JSON.parse(savedRecentIds));
+            }
+        } catch (error) {
+            console.error("Error parsing data from localStorage:", error);
+            // Fallback to initial data if localStorage is corrupted
             setAllCars(initialCars);
-            // Default recent cars: first 6
             const initialRecents = initialCars.slice(0, 6).map(c => c.id);
             setRecentCarIds(initialRecents);
-            // Save initial state to local storage so edits persist
-            localStorage.setItem('lbx_allCars_v2', JSON.stringify(initialCars));
-            localStorage.setItem('lbx_recentCarIds_v2', JSON.stringify(initialRecents));
-        }
-
-        if (savedRecentIds) {
-            setRecentCarIds(JSON.parse(savedRecentIds));
+            // Optional: Clear corrupted data
+            localStorage.removeItem('lbx_allCars_v2');
+            localStorage.removeItem('lbx_recentCarIds_v2');
         }
 
         if (savedAdmin === 'true') {

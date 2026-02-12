@@ -6,7 +6,6 @@ import { useCarContext } from '../context/CarContext';
 import { Search, Filter, ArrowRight, Gauge, Fuel, Calendar, Phone, Mail, Copy, Check, X, RotateCcw } from 'lucide-react';
 
 import './InventoryPage.css';
-import { color } from 'framer-motion';
 
 const InventoryPage = () => {
     const { allCars } = useCarContext();
