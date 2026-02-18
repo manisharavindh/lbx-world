@@ -21,9 +21,9 @@ const HomePage = () => (
         <Inventory />
         <BrandMarquee />
         <ModelShowcase />
+        <SellYourVehicle />
         <Experience />
         <Services />
-        <SellYourVehicle />
         <Contact />
         <Footer />
         {/* <FC /> */}

@@ -46,10 +46,8 @@ const SellYourVehicle = () => {
                             </div>
 
                             <div className="scanner-body">
-                                {/* Abstract Car Visualization */}
                                 <div className="car-wireframe">
-                                    <div className="car-shape"></div>
-                                    {/* Scan Line Animation */}
+                                    <img src="/assets/supercar_wireframe.png" alt="Supercar Wireframe" className="car-wireframe-img" />
                                     <div className="scan-overlay"></div>
                                 </div>
 
