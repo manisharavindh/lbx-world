@@ -8,6 +8,7 @@ import Footer from '../components/Footer';
 import Contact from '../components/Contact';
 import ModelShowcase from '../components/ModelShowcase';
 import Services from '../components/Services';
+import SellYourVehicle from '../components/SellYourVehicle';
 
 // import floatinf contact
 import FC from '../components/FloatingContact';
@@ -22,6 +23,7 @@ const HomePage = () => (
         <ModelShowcase />
         <Experience />
         <Services />
+        <SellYourVehicle />
         <Contact />
         <Footer />
         {/* <FC /> */}

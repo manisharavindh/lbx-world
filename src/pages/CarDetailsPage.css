@@ -400,8 +400,8 @@
 }
 
 .price-card {
-    background: #1a1a1a;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #080808;
+    border: 1px solid rgba(255, 255, 255, 0.15);
     padding: 24px;
     border-radius: 16px;
     box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);

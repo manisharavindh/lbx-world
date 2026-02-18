@@ -3,6 +3,12 @@ import { Check } from 'lucide-react';
 import './Experience.css';
 
 const Experience = () => {
+    const scrollToServices = () => {
+        const element = document.getElementById('services');
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
     return (
         <section className="experience section-padding" id="experience">
             <div className="container">
@@ -33,7 +39,7 @@ const Experience = () => {
                             </li>
                         </ul>
 
-                        <button className="btn-outline" style={{ marginTop: '2rem' }}>Discover Our Services</button>
+                        <button className="btn-outline" onClick={scrollToServices}>Discover Our Services</button>
                     </div>
 
                     <div className="exp-image-container">
