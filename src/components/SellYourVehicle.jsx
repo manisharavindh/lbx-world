@@ -18,7 +18,7 @@ const SellYourVehicle = () => {
 
                     {/* Left Content */}
                     <div className="sell-text-content">
-                        <span className="badge">Premium Consignment Service</span>
+                        <span className="badge-sell">Premium Consignment Service</span>
                         <h2>Sell Your Exotic<br />With Confidence.</h2>
                         <p>Let us handle the entire sale process for you. We leverage our global network of qualified buyers and handle all marketing, negotiations, and logistics to ensure you receive the maximum value for your asset.</p>
 

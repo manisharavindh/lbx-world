@@ -358,8 +358,8 @@ const InventoryPage = () => {
                             </p>
                         </div>
                         <div className="modal-footer">
-                            <button className="btn-outline" onClick={() => setEmailModalOpen(false)}>Cancel</button>
-                            <button className="btn-primary" onClick={confirmEmailAction}>Open Email</button>
+                            <button className="btn-outline-in" onClick={() => setEmailModalOpen(false)}>Cancel</button>
+                            <button className="btn-primary-in" onClick={confirmEmailAction}>Open Email</button>
                         </div>
                     </div>
                 </div>
@@ -392,7 +392,7 @@ const InventoryPage = () => {
                             </div>
                         </div>
                         <div className="modal-footer">
-                            <button className="btn-outline full-width-btn" onClick={() => setPhoneModalOpen(false)}>Close</button>
+                            <button className="btn-outline-in full-width-btn" onClick={() => setPhoneModalOpen(false)}>Close</button>
                         </div>
                     </div>
                 </div>
