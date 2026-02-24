@@ -48,7 +48,7 @@ const InventoryPage = () => {
     };
 
     const copyPhoneNumber = () => {
-        navigator.clipboard.writeText('+44 7777 777 777');
+        navigator.clipboard.writeText('+91 6385087404');
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);
     };
@@ -90,9 +90,9 @@ const InventoryPage = () => {
 
         // Price filter logic
         let matchesPrice = true;
-        if (priceRange === 'low') matchesPrice = parseFloat(car.price) < 200000;
-        if (priceRange === 'mid') matchesPrice = parseFloat(car.price) >= 200000 && parseFloat(car.price) < 500000;
-        if (priceRange === 'high') matchesPrice = parseFloat(car.price) >= 500000;
+        if (priceRange === 'low') matchesPrice = parseFloat(car.price) < 5000000;
+        if (priceRange === 'mid') matchesPrice = parseFloat(car.price) >= 150000000 && parseFloat(car.price) < 15000000;
+        if (priceRange === 'high') matchesPrice = parseFloat(car.price) >= 15000000;
 
         return matchesType && matchesSearch && matchesBrand && matchesPrice;
     }).sort((a, b) => {
@@ -212,28 +212,28 @@ const InventoryPage = () => {
                                     <span className="filter-label">Price Range</span>
                                     <div className="price-filters-grid">
                                         <button
-                                            className={`filter-btn ${priceRange === 'all' ? 'active' : ''}`}
+                                            className={`filter-btn ₹{priceRange === 'all' ? 'active' : ''}`}
                                             onClick={() => setPriceRange('all')}
                                         >
                                             All Prices
                                         </button>
                                         <button
-                                            className={`filter-btn ${priceRange === 'low' ? 'active' : ''}`}
+                                            className={`filter-btn ₹{priceRange === 'low' ? 'active' : ''}`}
                                             onClick={() => setPriceRange('low')}
                                         >
-                                            &lt; $200k
+                                            &lt; ₹50L
                                         </button>
                                         <button
-                                            className={`filter-btn ${priceRange === 'mid' ? 'active' : ''}`}
+                                            className={`filter-btn ₹{priceRange === 'mid' ? 'active' : ''}`}
                                             onClick={() => setPriceRange('mid')}
                                         >
-                                            $200k - $500k
+                                            ₹50L - ₹1.5Cr
                                         </button>
                                         <button
-                                            className={`filter-btn ${priceRange === 'high' ? 'active' : ''}`}
+                                            className={`filter-btn ₹{priceRange === 'high' ? 'active' : ''}`}
                                             onClick={() => setPriceRange('high')}
                                         >
-                                            &gt; $500k
+                                            &gt; ₹1.5Cr
                                         </button>
                                     </div>
                                 </div>
@@ -286,14 +286,14 @@ const InventoryPage = () => {
 
                         <div className="card-content">
                             <h3>{car.model}</h3>
-                            <div className="price-tag">${car.price.toLocaleString()}</div>
+                            <div className="price-tag">₹{car.price.toLocaleString('en-IN')}</div>
 
                             <div className="specs-grid">
                                 <div className="spec-item">
                                     <Gauge size={16} />
                                     <div>
                                         <span className="label">Mileage</span>
-                                        <span className="value">{car.mileage.toLocaleString()} mi</span>
+                                        <span className="value">{car.mileage.toLocaleString('en-IN')} mi</span>
                                     </div>
                                 </div>
                                 <div className="spec-item">
@@ -380,13 +380,13 @@ const InventoryPage = () => {
                                 Call us directly or copy the number below.
                             </p>
                             <div className="phone-display-box">
-                                <span className="phone-number">+44 7777 777 777</span>
+                                <span className="phone-number">+91 6385087404</span>
                                 <button className="copy-btn" onClick={copyPhoneNumber}>
                                     {copied ? <Check size={18} /> : <Copy size={18} />}
                                 </button>
                             </div>
                             <div className="mobile-only-action">
-                                <a href="tel:+447777777777" className="btn-primary full-width-btn">
+                                <a href="tel:+916385087404" className="btn-primary full-width-btn">
                                     <Phone size={16} /> Call Now
                                 </a>
                             </div>

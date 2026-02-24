@@ -4,7 +4,7 @@ export const cars = [
         year: '2023',
         brand: 'ASTON MARTIN',
         model: 'V12 Vantage Roadster',
-        price: 240000,
+        price: 35000000,
         image: 'https://d2blhp03rkvfi4.cloudfront.net/cache/width_1920/car/car-536211/photo/2023-aston--martin-v12--vantage--roadster-269995-241718709.webp',
         images: [
             'https://d2blhp03rkvfi4.cloudfront.net/cache/width_1920/car/car-536211/photo/2023-aston--martin-v12--vantage--roadster-269995-241718709.webp',
@@ -31,7 +31,7 @@ export const cars = [
         year: '2023',
         brand: 'LAND ROVER',
         model: 'Defender V8',
-        price: 110000,
+        price: 23000000,
         image: 'https://d2blhp03rkvfi4.cloudfront.net/cache/width_1920/car/car-538594/photo/2023-land--rover-defender--110-55950-438908783.webp',
         images: [
             'https://d2blhp03rkvfi4.cloudfront.net/cache/width_1920/car/car-538594/photo/2023-land--rover-defender--110-55950-438908783.webp',
@@ -58,7 +58,7 @@ export const cars = [
         year: '2024',
         brand: 'BMW',
         model: 'M340i',
-        price: 48000,
+        price: 7290000,
         image: 'https://d2blhp03rkvfi4.cloudfront.net/cache/width_1920/car/car-541061/photo/2025-bmw-3--series-62900-1271726528.webp',
         images: [
             'https://d2blhp03rkvfi4.cloudfront.net/cache/width_1920/car/car-541061/photo/2025-bmw-3--series-62900-1271726528.webp',
@@ -85,7 +85,7 @@ export const cars = [
         year: '2024',
         brand: 'FERRARI',
         model: 'Roma',
-        price: 150000,
+        price: 37600000,
         image: 'https://d2blhp03rkvfi4.cloudfront.net/cache/width_1920/car/car-484926/photo/2024-ferrari-roma--spider-359895-488616055.webp',
         images: [
             'https://d2blhp03rkvfi4.cloudfront.net/cache/width_1920/car/car-484926/photo/2024-ferrari-roma--spider-359895-488616055.webp',
@@ -112,7 +112,7 @@ export const cars = [
         year: '2025',
         brand: 'ROLLS-ROYCE',
         model: 'Spectre',
-        price: 450000,
+        price: 75000000,
         image: 'https://d2blhp03rkvfi4.cloudfront.net/cache/width_1920/car/car-522116/photo/2025-rolls-royce-spectre-561146-527303088.webp',
         images: [
             'https://d2blhp03rkvfi4.cloudfront.net/cache/width_1920/car/car-522116/photo/2025-rolls-royce-spectre-561146-527303088.webp',
@@ -139,7 +139,7 @@ export const cars = [
         year: '2023',
         brand: 'PORSCHE',
         model: '911 GT3 RS',
-        price: 325000,
+        price: 35000000,
         image: 'https://d2blhp03rkvfi4.cloudfront.net/cache/width_1920/car/car-545927/photo/2025-porsche-911--gt3--rs-0-593581247.webp',
         images: [
             'https://d2blhp03rkvfi4.cloudfront.net/cache/width_1920/car/car-545927/photo/2025-porsche-911--gt3--rs-0-593581247.webp',
@@ -166,7 +166,7 @@ export const cars = [
         year: '2024',
         brand: 'LAMBORGHINI',
         model: 'Revuelto',
-        price: 608000,
+        price: 88900000,
         image: 'https://d2blhp03rkvfi4.cloudfront.net/cache/width_1920/car/car-494043/photo/2025-lamborghini-revuelto-999980-1424742892.webp',
         images: [
             'https://d2blhp03rkvfi4.cloudfront.net/cache/width_1920/car/car-494043/photo/2025-lamborghini-revuelto-999980-1424742892.webp',
@@ -193,7 +193,7 @@ export const cars = [
         year: '1980',
         brand: 'BMW',
         model: 'M1',
-        price: 555000,
+        price: 80000000,
         image: 'https://d2blhp03rkvfi4.cloudfront.net/cache/width_1920/car/car-155062/photo/1980-bmw-m1-0-1863576485.webp',
         images: [
             'https://d2blhp03rkvfi4.cloudfront.net/cache/width_1920/car/car-155062/photo/1980-bmw-m1-0-1863576485.webp',
@@ -222,7 +222,7 @@ export const cars = [
         year: '2018',
         brand: 'AUDI',
         model: 'R8 Spyder',
-        price: 149000,
+        price: 18000000,
         image: 'https://d2blhp03rkvfi4.cloudfront.net/cache/width_1920/car/car-484143/photo/2018-audi-r8--spyder-149000-1424832470.webp',
         images: [
             'https://d2blhp03rkvfi4.cloudfront.net/cache/width_1920/car/car-484143/photo/2018-audi-r8--spyder-149000-1424832470.webp',
@@ -251,7 +251,7 @@ export const cars = [
         year: '2023',
         brand: 'AUDI',
         model: 'R8 V10 Performance',
-        price: 185000,
+        price: 27200000,
         image: 'https://d2blhp03rkvfi4.cloudfront.net/cache/width_1920/car/car-546680/photo/2023-audi-r8--v10--performance-185000-2037900078.webp',
         images: [
             'https://d2blhp03rkvfi4.cloudfront.net/cache/width_1920/car/car-546680/photo/2023-audi-r8--v10--performance-185000-2037900078.webp',
@@ -280,7 +280,7 @@ export const cars = [
         year: '2024',
         brand: 'BMW',
         model: 'M4',
-        price: 73900,
+        price: 15300000,
         image: 'https://d2blhp03rkvfi4.cloudfront.net/cache/width_1920/car/car-550027/photo/2024-bmw-m4-73950-554580626.webp',
         images: [
             'https://d2blhp03rkvfi4.cloudfront.net/cache/width_1920/car/car-550027/photo/2024-bmw-m4-73950-554580626.webp',
@@ -308,7 +308,7 @@ export const cars = [
         year: '2026',
         brand: 'BMW',
         model: 'X5',
-        price: 128497,
+        price: 11000000,
         image: 'https://d2blhp03rkvfi4.cloudfront.net/cache/width_1920/car/car-528924/photo/2026-bmw-x5-129995-949232041.webp',
         images: [
             'https://d2blhp03rkvfi4.cloudfront.net/cache/width_1920/car/car-528924/photo/2026-bmw-x5-129995-949232041.webp',
@@ -337,7 +337,7 @@ export const cars = [
         year: '2023',
         brand: 'MERCEDES-BENZ',
         model: 'Metris',
-        price: 605000,
+        price: 25000000,
         image: 'https://d2blhp03rkvfi4.cloudfront.net/cache/width_1920/car/car-463223/photo/2023-mercedes-benz-metris-169000-463344718.webp',
         images: [
             'https://d2blhp03rkvfi4.cloudfront.net/cache/width_1920/car/car-463223/photo/2023-mercedes-benz-metris-169000-463344718.webp',
@@ -367,7 +367,7 @@ export const cars = [
         year: '2025',
         brand: 'MERCEDES-BENZ',
         model: 'AMG G 63',
-        price: 228950,
+        price: 33000000,
         image: 'https://d2blhp03rkvfi4.cloudfront.net/cache/width_1920/car/car-543599/photo/2025-mercedes-benz-g63--amg-233500-715274264.webp',
         images: [
             'https://d2blhp03rkvfi4.cloudfront.net/cache/width_1920/car/car-543599/photo/2025-mercedes-benz-g63--amg-233500-715274264.webp',
@@ -395,7 +395,7 @@ export const cars = [
         year: '2022',
         brand: 'ROLLS-ROYCE',
         model: 'CULLINAN',
-        price: 311950,
+        price: 69500000,
         image: 'https://d2blhp03rkvfi4.cloudfront.net/cache/width_1920/car/car-546928/photo/2022-rolls-royce-cullinan-311950-391429838.webp',
         images: [
             'https://d2blhp03rkvfi4.cloudfront.net/cache/width_1920/car/car-546928/photo/2022-rolls-royce-cullinan-311950-391429838.webp',
@@ -420,7 +420,7 @@ export const cars = [
         year: '2026',
         brand: 'ROLLS-ROYCE',
         model: 'CULLINAN',
-        price: 519980,
+        price: 82000000,
         image: 'https://d2blhp03rkvfi4.cloudfront.net/cache/width_1920/car/car-515981/photo/2026-rolls-royce-cullinan-519980-1539989740.webp',
         images: [
             'https://d2blhp03rkvfi4.cloudfront.net/cache/width_1920/car/car-515981/photo/2026-rolls-royce-cullinan-519980-1539989740.webp',
@@ -450,7 +450,7 @@ export const cars = [
         year: '2020',
         brand: 'DUCATI ',
         model: 'Superleggera V4 998cc',
-        price: 84999,
+        price: 11200000,
         image: 'https://m.atcdn.co.uk/a/media/w1024/dfbef0830382454aabfa12bde41f4a18.jpg',
         images: [
             'https://m.atcdn.co.uk/a/media/w1024/dfbef0830382454aabfa12bde41f4a18.jpg',
@@ -477,7 +477,7 @@ export const cars = [
         year: '2020',
         brand: 'DUCATI ',
         model: 'Panigale V4 1103cc',
-        price: 69995,
+        price: 7000000,
         image: 'https://m.atcdn.co.uk/a/media/w1024/434fbec4252b49bd9bb08c0009695e02.jpg',
         images: [
             'https://m.atcdn.co.uk/a/media/w1024/434fbec4252b49bd9bb08c0009695e02.jpg',
@@ -506,7 +506,7 @@ export const cars = [
         year: '2020',
         brand: 'BMW',
         model: 'HP4',
-        price: 37500,
+        price: 8500000,
         image: 'https://m.atcdn.co.uk/a/media/w800/9a4103f7b16543078005554452655397.jpg',
         images: [
             'https://m.atcdn.co.uk/a/media/w800/9a4103f7b16543078005554452655397.jpg',
@@ -535,7 +535,7 @@ export const cars = [
         year: '2020',
         brand: 'HONDA',
         model: 'CBR1000RR-R Fireblade SP',
-        price: 36990,
+        price: 6500000,
         image: 'https://m.atcdn.co.uk/a/media/w800/6c3e565a9b8e4398b0eb5c70bc6a115a.jpg',
         images: [
             'https://m.atcdn.co.uk/a/media/w800/6c3e565a9b8e4398b0eb5c70bc6a115a.jpg',
@@ -564,7 +564,7 @@ export const cars = [
         year: '2024',
         brand: 'KAWASIKI',
         model: 'Ninja ZX-10RR',
-        price: 22995,
+        price: 5000000,
         image: 'https://m.atcdn.co.uk/a/media/w800/f51f54b36e6c4c188826f9d429b7fc92.jpg',
         images: [
             'https://m.atcdn.co.uk/a/media/w800/f51f54b36e6c4c188826f9d429b7fc92.jpg',

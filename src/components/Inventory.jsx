@@ -36,7 +36,7 @@ const Inventory = () => {
     };
 
     const copyPhoneNumber = () => {
-        navigator.clipboard.writeText('+44 7777 777 777');
+        navigator.clipboard.writeText('+91 6385087404');
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);
     };
@@ -128,14 +128,14 @@ const Inventory = () => {
 
                             <div className="card-content">
                                 <h3>{car.model}</h3>
-                                <div className="price-tag">${car.price.toLocaleString()}</div>
+                                <div className="price-tag">₹{car.price.toLocaleString('en-IN')}</div>
 
                                 <div className="specs-grid">
                                     <div className="spec-item">
                                         <Gauge size={16} />
                                         <div>
                                             <span className="label">Mileage</span>
-                                            <span className="value">{car.mileage.toLocaleString()} mi</span>
+                                            <span className="value">{car.mileage.toLocaleString('en-IN')} mi</span>
                                         </div>
                                     </div>
                                     <div className="spec-item">
@@ -214,13 +214,13 @@ const Inventory = () => {
                                 Call us directly or copy the number below.
                             </p>
                             <div className="phone-display-box">
-                                <span className="phone-number">+44 7777 777 777</span>
+                                <span className="phone-number">+91 6385087404</span>
                                 <button className="copy-btn" onClick={copyPhoneNumber}>
                                     {copied ? <Check size={18} /> : <Copy size={18} />}
                                 </button>
                             </div>
                             <div className="mobile-only-action">
-                                <a href="tel:+447777777777" className="btn-primary full-width-btn">
+                                <a href="tel:+916385087404" className="btn-primary full-width-btn">
                                     <Phone size={16} /> Call Now
                                 </a>
                             </div>

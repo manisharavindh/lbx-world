@@ -378,7 +378,7 @@ const AdminDashboard = () => {
 
                             <div className="card-content">
                                 <h3 className="card-title">{car.brand} {car.model}</h3>
-                                <p className="card-info">{car.year} • ${car.price.toLocaleString()}</p>
+                                <p className="card-info">{car.year} • ₹{car.price.toLocaleString('en-IN')}</p>
                             </div>
 
                             <div className="card-controls">
@@ -488,7 +488,7 @@ const AdminDashboard = () => {
                                             />
                                         </div>
                                         <div className="input-group">
-                                            <label className="input-label">Price ($)</label>
+                                            <label className="input-label">Price (₹)</label>
                                             <input
                                                 type="number"
                                                 className="form-input"

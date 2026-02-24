@@ -157,7 +157,7 @@ const CarDetailsPage = () => {
                             </div>
                         </div>
                         <div className="header-price-mobile text-gradient">
-                            ${car.price.toLocaleString()}
+                            ₹{car.price.toLocaleString('en-IN')}
                         </div>
                     </div>
                 </div>
@@ -233,7 +233,7 @@ const CarDetailsPage = () => {
                                     <>
                                         <div className="spec-box glass">
                                             <span className="spec-label">Mileage</span>
-                                            <span className="spec-value">{car.mileage.toLocaleString()} {isMotorcycle ? 'km' : 'mi'}</span>
+                                            <span className="spec-value">{car.mileage.toLocaleString('en-IN')} {isMotorcycle ? 'km' : 'mi'}</span>
                                         </div>
                                         <div className="spec-box glass">
                                             <span className="spec-label">Fuel Type</span>
@@ -276,7 +276,7 @@ const CarDetailsPage = () => {
                     <div className="details-sidebar">
                         <div className="price-card glass-card">
                             <div className="price-label">Offered At</div>
-                            <div className="price-amount text-gradient">${car.price.toLocaleString()}</div>
+                            <div className="price-amount text-gradient">₹{car.price.toLocaleString('en-IN')}</div>
 
                             <div className="verification-badges">
                                 <div className="v-badge">

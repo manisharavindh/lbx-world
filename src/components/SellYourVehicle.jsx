@@ -75,14 +75,14 @@ const SellYourVehicle = () => {
                             <BarChart2 size={16} color="#fff" />
                             <div>
                                 <span style={{ display: 'block', fontSize: '10px', color: '#666' }}>Recent Sale</span>
-                                <span className="price">Ferrari 488: $245k</span>
+                                <span className="price">Ferrari 488: ₹3.5Cr</span>
                             </div>
                         </div>
                         <div className="floating-tag tag-2">
                             <BarChart2 size={16} color="#fff" />
                             <div>
                                 <span style={{ display: 'block', fontSize: '10px', color: '#666' }}>Recent Sale</span>
-                                <span className="price">GT3 RS: $310k</span>
+                                <span className="price">GT3 RS: ₹4.5Cr</span>
                             </div>
                         </div>
                     </div>

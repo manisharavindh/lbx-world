@@ -15,8 +15,8 @@ export const CarProvider = ({ children }) => {
     // ---- Load Data on Mount ----
     useEffect(() => {
         // Check local storage for persisted data
-        const savedCars = localStorage.getItem('lbx_allCars_v2');
-        const savedRecentIds = localStorage.getItem('lbx_recentCarIds_v2');
+        const savedCars = localStorage.getItem('lbx_allCars_v3');
+        const savedRecentIds = localStorage.getItem('lbx_recentCarIds_v3');
         const savedAdmin = localStorage.getItem('lbx_isAdmin');
 
         try {
@@ -27,8 +27,8 @@ export const CarProvider = ({ children }) => {
                 setAllCars(initialCars);
                 const initialRecents = initialCars.slice(0, 6).map(c => c.id);
                 setRecentCarIds(initialRecents);
-                localStorage.setItem('lbx_allCars_v2', JSON.stringify(initialCars));
-                localStorage.setItem('lbx_recentCarIds_v2', JSON.stringify(initialRecents));
+                localStorage.setItem('lbx_allCars_v3', JSON.stringify(initialCars));
+                localStorage.setItem('lbx_recentCarIds_v3', JSON.stringify(initialRecents));
             }
 
             if (savedRecentIds) {
@@ -41,8 +41,8 @@ export const CarProvider = ({ children }) => {
             const initialRecents = initialCars.slice(0, 6).map(c => c.id);
             setRecentCarIds(initialRecents);
             // Optional: Clear corrupted data
-            localStorage.removeItem('lbx_allCars_v2');
-            localStorage.removeItem('lbx_recentCarIds_v2');
+            localStorage.removeItem('lbx_allCars_v3');
+            localStorage.removeItem('lbx_recentCarIds_v3');
         }
 
         if (savedAdmin === 'true') {
@@ -77,47 +77,47 @@ export const CarProvider = ({ children }) => {
 
         const updatedCars = [carWithId, ...allCars]; // Add to front
         setAllCars(updatedCars);
-        localStorage.setItem('lbx_allCars_v2', JSON.stringify(updatedCars));
+        localStorage.setItem('lbx_allCars_v3', JSON.stringify(updatedCars));
 
         // Automatically add to recent list (as per requirement: "newly added ones should show on the recently park list")
         const updatedRecents = [id, ...recentCarIds];
         setRecentCarIds(updatedRecents);
-        localStorage.setItem('lbx_recentCarIds_v2', JSON.stringify(updatedRecents));
+        localStorage.setItem('lbx_recentCarIds_v3', JSON.stringify(updatedRecents));
     };
 
     const editCar = (updatedCar) => {
         const updatedCars = allCars.map(c => c.id === updatedCar.id ? updatedCar : c);
         setAllCars(updatedCars);
-        localStorage.setItem('lbx_allCars_v2', JSON.stringify(updatedCars));
+        localStorage.setItem('lbx_allCars_v3', JSON.stringify(updatedCars));
     };
 
     const deleteCar = (id) => {
         const updatedCars = allCars.filter(c => c.id !== id);
         setAllCars(updatedCars);
-        localStorage.setItem('lbx_allCars_v2', JSON.stringify(updatedCars));
+        localStorage.setItem('lbx_allCars_v3', JSON.stringify(updatedCars));
 
         // Also remove from recents if present
         if (recentCarIds.includes(id)) {
             const updatedRecents = recentCarIds.filter(rid => rid !== id);
             setRecentCarIds(updatedRecents);
-            localStorage.setItem('lbx_recentCarIds_v2', JSON.stringify(updatedRecents));
+            localStorage.setItem('lbx_recentCarIds_v3', JSON.stringify(updatedRecents));
         }
     };
 
     const updateRecentList = (ids) => {
         setRecentCarIds(ids);
-        localStorage.setItem('lbx_recentCarIds_v2', JSON.stringify(ids));
+        localStorage.setItem('lbx_recentCarIds_v3', JSON.stringify(ids));
     };
 
     // Bulk Import for JSON data
     const importData = (data) => {
         if (data.allCars && Array.isArray(data.allCars)) {
             setAllCars(data.allCars);
-            localStorage.setItem('lbx_allCars_v2', JSON.stringify(data.allCars));
+            localStorage.setItem('lbx_allCars_v3', JSON.stringify(data.allCars));
         }
         if (data.recentCarIds && Array.isArray(data.recentCarIds)) {
             setRecentCarIds(data.recentCarIds);
-            localStorage.setItem('lbx_recentCarIds_v2', JSON.stringify(data.recentCarIds));
+            localStorage.setItem('lbx_recentCarIds_v3', JSON.stringify(data.recentCarIds));
         }
     };
 
